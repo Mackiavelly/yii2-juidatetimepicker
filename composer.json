@@ -1,0 +1,24 @@
+{
+  "name": "mackiavelly/yii2-juidatetimepicker",
+  "description": "Yii 2 jQuery UI Datetime/Time Picker Widget",
+  "keywords": ["yii2", "jquery", "jquery-ui", "datetime", "time", "picker"],
+  "homepage": "http://trentrichardson.com/examples/timepicker/",
+  "type": "yii2-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ksander Zone",
+      "email": "ksander.zone@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": ">=2.0.4",
+    "mackiavelly/yii2-juidatepicker": "*",
+    "bower-asset/jqueryui-timepicker-addon": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "mackiavelly\\juidatetimepicker\\": ""
+    }
+  }
+}
