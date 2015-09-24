@@ -83,6 +83,13 @@ class JuiTimePicker extends InputWidget
         if (!$this->ignoreReadonly && array_key_exists('readonly', $this->options) && $this->options['readonly']) {
             $this->clientOptions['beforeShow'] = new JsExpression('function (input, inst) { return false; }');
         }
+        if ($this->disableAlt) {
+            foreach ($this->clientOptions as $keyCO => $valueCO) {
+                if (strrpos($keyCO, 'alt') !== false) {
+                    unset($this->clientOptions[$keyCO]);
+                }
+            }
+        }
         $js = 'jQuery(\'#' . $inputId . '\').timepicker(' . Json::htmlEncode($this->clientOptions) . ');';
         if (Yii::$app->getRequest()->getIsAjax()) {
             $output .= Html::script($js);
